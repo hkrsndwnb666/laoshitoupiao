@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>西校区老师投票</title>
+<style>
+  body{background:#222;color:#fff;font-family:Arial;padding:20px;}
+  .box{max-width:400px;margin:40px auto;background:#333;padding:25px;border-radius:12px;}
+  .item{margin:20px 0;padding:15px;background:#444;border-radius:8px;}
+  .btn{width:100%;padding:12px;background:#ff4444;color:#fff;border:none;border-radius:8px;font-size:16px;margin-top:10px;}
+  .num{font-size:18px;color:#ff4444;font-weight:bold;}
+</style>
+</head>
+<body>
+<div class="box">
+  <h2 style="text-align:center;">西校区老师投票 🗳️</h2>
+
+  <div class="item">
+    <p>老师1：静文</p>
+    <button class="btn" onclick="add('t1')">投一票</button>
+    <p>票数：<span class="num" id="t1">0</span></p>
+  </div>
+
+  <div class="item">
+    <p>老师2：赵辉</p>
+    <button class="btn" onclick="add('t2')">投一票</button>
+    <p>票数：<span class="num" id="t2">0</span></p>
+  </div>
+
+  <div class="item">
+    <p>老师3：周杰</p>
+    <button class="btn" onclick="add('t3')">投一票</button>
+    <p>票数：<span class="num" id="t3">0</span></p>
+  </div>
+
+  <div class="item">
+    <p>老师4：马玺</p>
+    <button class="btn" onclick="add('t4')">投一票</button>
+    <p>票数：<span class="num" id="t4">0</span></p>
+  </div>
+</div>
+
+<script>
+// 简单投票，只在当前浏览器记录
+function add(id) {
+  let el = document.getElementById(id);
+  el.innerText = Number(el.innerText) + 1;
+}
+</script>
+</body>
+</html>
